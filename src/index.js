@@ -5,11 +5,11 @@ hitButton &&
   hitButton.addEventListener('click', async (e) => {
     e.preventDefault();
     const res = await fetch(
-      `https://api.countapi.xyz/hit/purplecows.com/visits"/${KEY}`,
+      `https://api.countapi.xyz/hit/purplecows.com/${KEY}`,
       {
         method: 'GET',
       }
     );
-    const json = await res.json;
+    const json = await res.json();
     alert(`This button has been hit ${json.value} times!`);
   });
