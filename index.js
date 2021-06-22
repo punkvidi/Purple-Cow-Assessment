@@ -7,13 +7,14 @@ const KEY = '1ccb732e-b55a-4404-ad3f-0f99c02fe44e' //Note: this is not a secret
 
 const APP = EXPRESS()
 
-const distPath = PATH.join(__dirname, '/');
+const distPath = PATH.join(__dirname, '/dist');
 APP.use(bodyParser.json());
+APP.use(EXPRESS.static(distPath));
 
 APP.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
 });
 
 APP.get('/', (req, res) => {
-  res.sendFile(distPath  + './dist/index.html');
+  res.sendFile(distPath  + './index.html');
 })

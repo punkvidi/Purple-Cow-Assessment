@@ -5,7 +5,6 @@
     "build": "webpack"
   },
   "dependencies": {
-    "babel": "^6.23.0",
     "express": "^4.17.1",
     "webpack": "^5.40.0"
   },
