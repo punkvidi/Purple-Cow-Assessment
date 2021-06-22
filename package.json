@@ -2,7 +2,8 @@
   "name": "purple-cow-take-home",
   "version": "1.0.0",
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack && node index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
